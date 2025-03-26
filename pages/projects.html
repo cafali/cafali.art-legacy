@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>cafali - projects</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="cafali.art - projects">
+    <meta property="og:description" content="cafali.art – My personal space for creative projects and digital experiments">
+    <meta property="og:image" content="https://cafali.art/assets/icon.png">
+    <meta property="og:url" content="https://cafali.art">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="../css/themes/pixelcrack.css" id="pixelcrack-style">
+    <link rel="stylesheet" href="../css/themes/terminal.css" id="terminal-style">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/icon.png">
+    <link rel="stylesheet" href="../css/themes/styles.css">
+    <link rel="stylesheet" href="../css/overlay.css">
+
+    <a class="overlay" href="#">$ cd cafali.art/projects</a>
+    <a class="overlay home-link" href="../">/home</a>
+    <a class="overlay download-link" href="download">/download</a>
+
+    <script src="../scripts/scaleUI.js"></script>
+    <script src="../scripts/theme.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <a class="centered-text">My Projects</a>
+        <a>1/3</a>
+        <ul class="projects" id="projects"></ul>
+    </div>
+
+    <script>
+        const projectsData = [
+            {
+                name: "SnapKey (C++)",
+                description: "SnapKey provides a user-friendly Razer Snap Tap/Wooting SOCD alternative",
+                url: "https://github.com/cafali/SnapKey"
+            },
+            {
+                name: "CherryPad (JS)",
+                description: "CherryPad NotePad Extension - designed to make your note-taking experience quick and visually pleasing",
+                url: "https://github.com/cafali/CherryPad"
+            },
+            {
+                name: "PathScan (BAT)",
+                description: "PathScan exports information about the contents of directories and hard drives",
+                url: "https://github.com/cafali/PathScan"
+            },
+        ];
+
+        // display projects
+        function displayProjects() {
+            const projectsContainer = document.getElementById('projects');
+
+            // list items 
+            projectsData.forEach(project => {
+                const listItem = document.createElement('li');
+                listItem.className = 'project-item';
+
+                const title = document.createElement('a');
+                title.className = 'project-title';
+                title.href = project.url;
+                title.target = '_blank';
+                title.textContent = project.name;
+
+                const description = document.createElement('p');
+                description.className = 'project-description';
+                description.textContent = project.description || 'No description available';
+
+                listItem.appendChild(title);
+                listItem.appendChild(description);
+                projectsContainer.appendChild(listItem);
+            });
+        }
+
+        // display projects when the page loads
+        displayProjects();
+    </script>
+</body>
+</html>
+
+<a href="../" class="prhome-link"> <- HOME</a>
+<a href="projects2" class="prnext-link">NEXT -> </a>

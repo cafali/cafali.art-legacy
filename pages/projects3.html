@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>cafali - projects</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="cafali.art - projects">
+    <meta property="og:description" content="cafali.art – My personal space for creative projects and digital experiments">
+    <meta property="og:image" content="https://cafali.art/assets/icon.png">
+    <meta property="og:url" content="https://cafali.art">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="../css/themes/pixelcrack.css" id="pixelcrack-style">
+    <link rel="stylesheet" href="../css/themes/terminal.css" id="terminal-style">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/icon.png">
+
+    <a class="overlay" href="#">$ cd cafali.art/projects</a>
+    <a class="overlay home-link" href="../">/home</a>
+    <a class="overlay download-link" href="download">/download</a>
+
+    <script src="../scripts/scaleUI.js"></script>
+    <script src="../scripts/theme.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <a class="centered-text">My Projects</a>
+        <a>3/3</a>
+        <ul class="projects" id="projects"></ul>
+    </div>
+
+    <script>
+        const projectsData = [
+            {
+                name: "CursorChasing (JS/CSS)",
+                description: "CursorChasing is a lightweight .js that adds a dynamic cursor-following character to your website",
+                url: "https://github.com/cafali/CursorChasing"
+            },
+            {
+                name: "Wrurzbita.Live (WWW)",
+                description: "LIVE streaming website using private YouTube streaming while integrating Twitch chat. This setup bypasses strict Twitch streaming policies",
+                url: "https://wrurzbita.live"
+            },
+            {
+                name: "Loading...",
+                description: "",
+                url: ""
+            },
+        ];
+
+        // display projects
+        function displayProjects() {
+            const projectsContainer = document.getElementById('projects');
+
+            // list items 
+            projectsData.forEach(project => {
+                const listItem = document.createElement('li');
+                listItem.className = 'project-item';
+
+                const title = document.createElement('a');
+                title.className = 'project-title';
+                title.href = project.url;
+                title.target = '_blank';
+                title.textContent = project.name;
+
+                const description = document.createElement('p');
+                description.className = 'project-description';
+                description.textContent = project.description || 'No description available';
+
+                listItem.appendChild(title);
+                listItem.appendChild(description);
+                projectsContainer.appendChild(listItem);
+            });
+        }
+
+        // Display projects when the page loads
+        displayProjects();
+    </script>
+</body>
+</html>
+
+<a href="projects2" class="return2-link"> <- BACK</a>
+
+
+

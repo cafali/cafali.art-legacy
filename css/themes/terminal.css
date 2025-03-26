@@ -1,0 +1,403 @@
+:root {
+    --bg-color: linear-gradient(to bottom, #00140c, rgb(0, 0, 0)) !important;
+    --text-color: #ffffff;  /* lower buttons */
+    --accent-color: #00ff99;  /* title color, frames, main color */
+    --hover-color: #00ff99;  /* text hover */
+    --soft-lavender: #888;  /* index categories */
+    --deep-purple: #000f08;  /* project */
+    --medium-purple: #003830;  /* project hover */
+    --light-lavender: #d9d9d9;  /* projects text */
+    --bright-green: #ffffff;  /* <span> elements */
+    --faded-purple: #00ff991a;  /* faded background for buttons */
+}
+
+/* Global styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color); 
+    background: var(--bg-color);
+    color: var(--text-color); 
+    font-family: 'Press Start 2P', cursive; 
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-gif {
+    background-color: #00000000;
+    background-image: url('/assets/background3.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 450px 450px
+}
+
+.blink {
+    display: inline-block;
+    animation: blink-animation 1.8s infinite;
+}
+
+@keyframes blink-animation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.centered-text {
+    font-size: 4em; 
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-bottom: 20px; 
+    text-shadow: 0 0 5px var(--accent-color);
+    transition: transform 10.0s;
+}
+
+.centered-text:hover {
+    transform: scale(0.9);
+}
+
+.about-me {
+    font-size: 1.2em; 
+    color: var(--soft-lavender);
+    max-width: 900px;
+    margin-bottom: 20px; 
+}
+
+.projects-link {
+    font-size: 1.2em; 
+    color: var(--soft-lavender); 
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s;
+    margin-top: 10px;
+}
+
+.projects-link:hover {
+    color: var(--accent-color); 
+    transform: translateX(5px);
+}
+
+.github-link {
+    position: absolute;
+    bottom: 30px;
+    font-size: 1em;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s;
+    padding: 10px 15px;
+    border-radius: 5px; 
+    background-color: var(--faded-purple);
+}
+
+.github-link:hover {
+    color: var(--text-color);
+    background-color: var(--accent-color); 
+    transform: translateY(-5px); 
+}
+
+.projects {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px; 
+    list-style-type: none; 
+    padding: 0; 
+}
+
+.project-item {
+    background-color: var(--deep-purple);
+    border: 2px solid var(--accent-color); 
+    border-radius: 5px; 
+    padding: 15px; 
+    margin: 10px 0; 
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.project-item:hover {
+    background-color: var(--medium-purple); 
+    transform: translateY(-5px); 
+}
+
+.project-title {
+    font-size: 1.5em; 
+    color: var(--accent-color);
+    text-decoration: none; 
+    transition: color 0.3s ease;
+}
+
+.project-title:hover {
+    color: var(--hover-color); 
+}
+
+.project-description {
+    color: var(--light-lavender);
+    margin: 5px 0; 
+    font-size: 1em; 
+}
+
+.return-link, .next-link {
+    position: absolute;
+    font-size: 1em;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s;
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    background-color: var(--faded-purple); 
+}
+
+.return-link {
+    bottom: 30px; 
+}
+
+.next-link {
+    bottom: 70px; 
+}
+
+.return-link:hover, .next-link:hover {
+    color: var(--text-color); 
+    background-color: var(--accent-color); 
+    transform: translateY(-5px); 
+}
+
+@media (max-width: 768px) {
+    .centered-text {
+        font-size: 3em;
+    }
+
+    .project-item {
+        padding: 10px; 
+    }
+
+    .projects-link, .about-me {
+        font-size: 1em; 
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    background-color: #ffffff00;
+    animation: fadeIn 1s ease forwards; 
+    opacity: 0;
+}
+
+.prhome-link, .prnext-link {
+    position: absolute;
+    font-size: 1em;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s;
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    background-color: var(--faded-purple); 
+}
+
+.prhome-link {
+    bottom: 30px;
+    left: 250px;
+}
+
+.prnext-link {
+    bottom: 30px;
+    right: 250px;
+}
+
+.prhome-link:hover, .prnext-link:hover {
+    color: var(--text-color); 
+    background-color: var(--accent-color); 
+    transform: translateY(-5px); 
+}
+
+.return2-link {
+    position: absolute;
+    font-size: 1em;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s;
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    background-color: var(--faded-purple); 
+}
+
+.return2-link { 
+    bottom: 30px; 
+}
+
+.return2-link:hover {
+    color: var(--text-color); 
+    background-color: var(--accent-color); 
+    transform: translateY(-5px); 
+}
+
+.catalog-link  {
+    position: absolute;
+    font-size: 1em;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s;
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    background-color: var(--faded-purple); 
+}
+
+.changelog-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.changelog-item {
+    display: inline;
+}
+
+.changelog-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.changelog-link:hover {
+    color: var(--hover-color);
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: fixed;
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--accent-color);
+}
+
+.overlay:nth-of-type(1) {
+    top: 10px;
+    left: 10px;
+}
+
+.overlay.home-link {
+    bottom: 10px;
+    left: 10px;
+}
+
+.overlay.download-link {
+    bottom: 10px;
+    right: 10px;
+}
+
+.overlay.right-link {
+    bottom: 10px;
+    right: 10px;
+}
+
+/* quote home page - mid */
+.overlay.quote-link {
+    bottom: 30px;
+    right: 30px;
+    font-size: 3.2em;
+    opacity: 0;
+}
+
+/* quote home page - mid */
+.overlay.quote-link:hover {
+    font-family: Arial;
+    opacity: 1;
+}
+
+/* Styles for the clock id on index page */
+#clock {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    color: var(--accent-color);
+}
+
+/* Style for <span> inside <p> */
+p span {
+    color: var(--bright-green);
+}
+
+/* Common styles for all about.listpos elements */
+.about.listpos1, .about.listpos2, .about.listpos3, .about.listpos4, .about.listpos5, .about.listpos6 {
+    font-weight: bold;
+    font-style: bold;
+    color: var(--hover-color);
+}
+
+/* Style for all <p> elements */
+p {
+    color: #f8f8f2;
+}
+
+#matrix-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; 
+    background: #191919;
+}
+
+.loading-container {
+    text-align: center;
+}
+
+.loading-text {
+    font-size: 2em;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color);
+}
+
+.blink {
+    display: inline-block;
+    animation: blink-animation 1.5s infinite;
+    color: var(--accent-color);
+}
+
+@keyframes blink-animation {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.loading-bar {
+    width: 300px;
+    height: 20px;
+    border: 2px solid var(--accent-color);
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.loading-progress {
+    width: 0;
+    height: 100%;
+    background: var(--accent-color);
+    animation: load-progress 3s linear infinite;
+}
+
+@keyframes load-progress {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
