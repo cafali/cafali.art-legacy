@@ -9,6 +9,15 @@
     --link-color: #00ff99;
 }
 
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #04431500;
+    color-scheme: dark;
+    z-index: -1;
+}
+
 body {
     background: var(--background-gradient);
     color: var(--text-color);
