@@ -11,7 +11,16 @@
     --faded-purple: #be00ff1a;  /* faded background for buttons */
 }
 
-/* Global styles */
+#particles-js {
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #04431500;
+    color-scheme: dark;
+    z-index: 0;
+}
+
 body, html {
     height: 100%;
     margin: 0;
