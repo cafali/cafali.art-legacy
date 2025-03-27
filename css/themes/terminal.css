@@ -9,6 +9,7 @@
     --light-lavender: #d9d9d9;  /* projects text */
     --bright-green: #ffffff;  /* <span> elements */
     --faded-purple: #00ff991a;  /* faded background for buttons */
+    --load-color: #00ffd913;  /* loading screen */
 }
 
 #particles-js {
@@ -34,6 +35,28 @@ body, html {
     background-attachment: fixed;
     position: relative;
     overflow: hidden;
+}
+
+#flash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--load-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    color: var(--load-color);
+    font-size: 3em;
+    opacity: 1;
+    transition: opacity 2s ease-out;
+}
+
+#flash-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .background-gif {

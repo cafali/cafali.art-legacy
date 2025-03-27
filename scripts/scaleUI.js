@@ -18,3 +18,13 @@ function adjustViewport() {
 // Run on load and resize
 document.addEventListener('DOMContentLoaded', adjustViewport);
 window.addEventListener('resize', adjustViewport);
+
+
+
+// load page flash
+window.onload = function() {
+    setTimeout(function() {
+        // fade out loading screen
+        document.getElementById('flash-screen').classList.add('hidden');
+    },100); 
+};
