@@ -1,15 +1,15 @@
 :root {
-    --bg-color: linear-gradient(to bottom, #00140c, rgb(0, 0, 0)) !important;
-    --text-color: #ffffff;  /* lower buttons */
-    --accent-color: #00ff99;  /* title color, frames, main color */
-    --hover-color: #00ff99;  /* text hover */
-    --soft-lavender: #888;  /* index categories */
-    --deep-purple: #000f08;  /* project */
-    --medium-purple: #003830;  /* project hover */
-    --light-lavender: #d9d9d9;  /* projects text */
-    --bright-green: #ffffff;  /* <span> elements */
-    --faded-purple: #00ff991a;  /* faded background for buttons */
-    --load-color: #00ffd913;  /* loading screen */
+    --bg-color: linear-gradient(to bottom, #00140c, rgb(0, 0, 0)) !important;  /* background color */
+    --load-color: #00ffd913;  /* loading & splash screen */
+    --main-color: #00ff99;  /* main color, title, buttons */
+    --index-color: #888;  /* index categories */
+    --hover-color: #00ff99;  /* index categories hover */
+    --project-box: #000f08;  /* project box */
+    --project-hover: #003830;  /* project box hover */
+    --project-text: #d9d9d9;  /* project box text */
+    --span-color: #ffffff;  /* <span> elements */
+    --fbg-button: #00ff991a;  /* faded background for buttons */
+    --lowbutton-color: #ffffff;  /* lower buttons text on hover */
 }
 
 #particles-js {
@@ -30,7 +30,7 @@ body, html {
     align-items: center;
     background-color: var(--bg-color); 
     background: var(--bg-color);
-    color: var(--text-color); 
+    color: var(--lowbutton-color); 
     font-family: 'Press Start 2P', cursive; 
     background-attachment: fixed;
     position: relative;
@@ -86,10 +86,10 @@ body, html {
 
 .centered-text {
     font-size: 4em; 
-    color: var(--accent-color);
+    color: var(--main-color);
     text-decoration: none;
     margin-bottom: 20px; 
-    text-shadow: 0 0 5px var(--accent-color);
+    text-shadow: 0 0 5px var(--main-color);
     transition: transform 10.0s;
 }
 
@@ -99,21 +99,21 @@ body, html {
 
 .about-me {
     font-size: 1.2em; 
-    color: var(--soft-lavender);
+    color: var(--index-color);
     max-width: 900px;
     margin-bottom: 20px; 
 }
 
 .projects-link {
     font-size: 1.2em; 
-    color: var(--soft-lavender); 
+    color: var(--index-color); 
     text-decoration: none;
     transition: color 0.3s ease, transform 0.2s;
     margin-top: 10px;
 }
 
 .projects-link:hover {
-    color: var(--accent-color); 
+    color: var(--main-color); 
     transform: translateX(5px);
 }
 
@@ -121,17 +121,17 @@ body, html {
     position: absolute;
     bottom: 30px;
     font-size: 1em;
-    color: var(--accent-color);
+    color: var(--main-color);
     text-decoration: none;
     transition: color 0.3s ease, transform 0.2s;
     padding: 10px 15px;
     border-radius: 5px; 
-    background-color: var(--faded-purple);
+    background-color: var(--fbg-button);
 }
 
 .github-link:hover {
-    color: var(--text-color);
-    background-color: var(--accent-color); 
+    color: var(--lowbutton-color);
+    background-color: var(--main-color); 
     transform: translateY(-5px); 
 }
 
@@ -144,8 +144,8 @@ body, html {
 }
 
 .project-item {
-    background-color: var(--deep-purple);
-    border: 2px solid var(--accent-color); 
+    background-color: var(--project-box);
+    border: 2px solid var(--main-color); 
     border-radius: 5px; 
     padding: 15px; 
     margin: 10px 0; 
@@ -153,13 +153,13 @@ body, html {
 }
 
 .project-item:hover {
-    background-color: var(--medium-purple); 
+    background-color: var(--project-hover); 
     transform: translateY(-5px); 
 }
 
 .project-title {
     font-size: 1.5em; 
-    color: var(--accent-color);
+    color: var(--main-color);
     text-decoration: none; 
     transition: color 0.3s ease;
 }
@@ -169,7 +169,7 @@ body, html {
 }
 
 .project-description {
-    color: var(--light-lavender);
+    color: var(--project-text);
     margin: 5px 0; 
     font-size: 1em; 
 }
@@ -177,12 +177,12 @@ body, html {
 .return-link, .next-link {
     position: absolute;
     font-size: 1em;
-    color: var(--accent-color);
+    color: var(--main-color);
     text-decoration: none;
     transition: color 0.3s ease, transform 0.2s;
     padding: 10px 15px; 
     border-radius: 5px; 
-    background-color: var(--faded-purple); 
+    background-color: var(--fbg-button); 
 }
 
 .return-link {
@@ -194,8 +194,8 @@ body, html {
 }
 
 .return-link:hover, .next-link:hover {
-    color: var(--text-color); 
-    background-color: var(--accent-color); 
+    color: var(--lowbutton-color); 
+    background-color: var(--main-color); 
     transform: translateY(-5px); 
 }
 
@@ -233,12 +233,12 @@ body, html {
 .prhome-link, .prnext-link {
     position: absolute;
     font-size: 1em;
-    color: var(--accent-color);
+    color: var(--main-color);
     text-decoration: none;
     transition: color 0.3s ease, transform 0.2s;
     padding: 10px 15px; 
     border-radius: 5px; 
-    background-color: var(--faded-purple); 
+    background-color: var(--fbg-button); 
 }
 
 .prhome-link {
@@ -252,20 +252,20 @@ body, html {
 }
 
 .prhome-link:hover, .prnext-link:hover {
-    color: var(--text-color); 
-    background-color: var(--accent-color); 
+    color: var(--lowbutton-color); 
+    background-color: var(--main-color); 
     transform: translateY(-5px); 
 }
 
 .return2-link {
     position: absolute;
     font-size: 1em;
-    color: var(--accent-color);
+    color: var(--main-color);
     text-decoration: none;
     transition: color 0.3s ease, transform 0.2s;
     padding: 10px 15px; 
     border-radius: 5px; 
-    background-color: var(--faded-purple); 
+    background-color: var(--fbg-button); 
 }
 
 .return2-link { 
@@ -273,20 +273,20 @@ body, html {
 }
 
 .return2-link:hover {
-    color: var(--text-color); 
-    background-color: var(--accent-color); 
+    color: var(--lowbutton-color); 
+    background-color: var(--main-color); 
     transform: translateY(-5px); 
 }
 
 .catalog-link  {
     position: absolute;
     font-size: 1em;
-    color: var(--accent-color);
+    color: var(--main-color);
     text-decoration: none;
     transition: color 0.3s ease, transform 0.2s;
     padding: 10px 15px; 
     border-radius: 5px; 
-    background-color: var(--faded-purple); 
+    background-color: var(--fbg-button); 
 }
 
 .changelog-list {
@@ -303,7 +303,7 @@ body, html {
 }
 
 .changelog-link {
-    color: var(--accent-color);
+    color: var(--main-color);
     text-decoration: none;
     transition: color 0.3s ease, transform 0.2s;
     font-family: 'Press Start 2P', cursive;
@@ -318,7 +318,7 @@ body, html {
     position: fixed;
     text-decoration: none;
     font-size: 15px;
-    color: var(--accent-color);
+    color: var(--main-color);
 }
 
 .overlay:nth-of-type(1) {
@@ -361,12 +361,12 @@ body, html {
     top: 10px;
     right: 10px;
     font-size: 15px;
-    color: var(--accent-color);
+    color: var(--main-color);
 }
 
 /* Style for <span> inside <p> */
 p span {
-    color: var(--bright-green);
+    color: var(--span-color);
 }
 
 /* Common styles for all about.listpos elements */
@@ -397,14 +397,14 @@ p {
 
 .loading-text {
     font-size: 2em;
-    color: var(--accent-color);
-    text-shadow: 0 0 10px var(--accent-color);
+    color: var(--main-color);
+    text-shadow: 0 0 10px var(--main-color);
 }
 
 .blink {
     display: inline-block;
     animation: blink-animation 1.5s infinite;
-    color: var(--accent-color);
+    color: var(--main-color);
 }
 
 @keyframes blink-animation {
@@ -415,7 +415,7 @@ p {
 .loading-bar {
     width: 300px;
     height: 20px;
-    border: 2px solid var(--accent-color);
+    border: 2px solid var(--main-color);
     margin-top: 20px;
     position: relative;
     overflow: hidden;
@@ -424,7 +424,7 @@ p {
 .loading-progress {
     width: 0;
     height: 100%;
-    background: var(--accent-color);
+    background: var(--main-color);
     animation: load-progress 3s linear infinite;
 }
 
