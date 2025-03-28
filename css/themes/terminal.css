@@ -9,7 +9,7 @@
     --project-text: #d9d9d9;  /* project box text */
     --span-color: #ffffff;  /* <span> elements */
     --fbg-button: #00ff991a;  /* faded background for buttons */
-    --lowbutton-color: #ffffff;  /* lower buttons text on hover */
+    --lowbutton-color: #006118;  /* lower buttons text on hover */
 }
 
 #particles-js {
@@ -30,7 +30,7 @@ body, html {
     align-items: center;
     background-color: var(--bg-color); 
     background: var(--bg-color);
-    color: var(--lowbutton-color); 
+    color: var(--span-color); 
     font-family: 'Press Start 2P', cursive; 
     background-attachment: fixed;
     position: relative;

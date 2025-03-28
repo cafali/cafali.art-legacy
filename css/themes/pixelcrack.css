@@ -1,5 +1,5 @@
 :root {
-    --bg-color: linear-gradient(to bottom, #150039, rgb(19, 0, 15)) !important;    --load-color: #ff00b323;  /* loading & splash screen */
+    --bg-color: linear-gradient(to bottom, #150039, rgb(19, 0, 15)) !important;
     --load-color: #ff00b323;  /* loading & splash screen */
     --main-color: #ff2bf7;  /* main color, title, buttons */
     --index-color: #ff96fb;  /* index categories */
